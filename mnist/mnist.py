@@ -30,7 +30,7 @@ def parse_arguments():
                         help='input batch size for training')
     parser.add_argument('--test-batch-size', type=int, default=1000, metavar='N',
                         help='input batch size for test')
-    parser.add_argument('--epochs', type=int, default=10, metavar='N',
+    parser.add_argument('--epochs', type=int, default=1, metavar='N',
                         help='number of epochs for training')
     parser.add_argument('--lr', type=float, default=0.01, metavar='LR',
                         help='learning rate')
@@ -52,7 +52,7 @@ def parse_arguments():
     parser.add_argument('--hosts', type=list, default=[])
     parser.add_argument('--current-host', type=str, default=None)
     parser.add_argument('--model-dir', type=str, default='/tmp/mnist_model')
-    parser.add_argument('--data-dir', type=str, default='/tmp/mnist_torch/train')
+    parser.add_argument('--data-dir', type=str, default='/tmp/mnist_torch')
     parser.add_argument('--num-gpus', type=int, default=0)
 
     return parser.parse_args()
